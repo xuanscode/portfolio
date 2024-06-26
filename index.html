@@ -66,7 +66,6 @@
   display: inline-block;
   float: left;
   width: 100%;
-  height: 300px;
   padding: 20px;
 }
 
@@ -83,13 +82,13 @@
 
 @media screen and (min-width: 420px) {
   .aos-item {
-    width: 50%;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .aos-item {
-    width: 33%;
+    width: 100%;
   }
 }
 
@@ -127,14 +126,13 @@
 }
 
 .aos-anchors__content {
-  width: 400px;
+  width: 100%;
   margin: 50px auto;
 }
 
 .aos-anchors__content > div {
   position: relative;
   width: 100%;
-  height: 300px;
   margin-bottom: 50px;
   line-height: 300px;
   text-align: center;
@@ -155,15 +153,15 @@
 }
 
 .aos-anchors__content > div[data-placement$="-bottom"]::before {
-  background-color: red;
+  
 }
 
 .aos-anchors__content > div[data-placement$="-center"]::before {
-  background-color: green;
+
 }
 
 .aos-anchors__content > div[data-placement$="-top"]::before {
-  background-color: blue;
+
 }
 
 .aos-anchors__content > div[data-placement^="top-"]::before {
