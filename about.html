@@ -1,0 +1,86 @@
+<!doctype html>
+<meta charset="UTF-8">
+
+<HTML><HEAD>
+<TITLE>XUANDESIGNN [ portfolio 2024 ] anything should be 𝓑𝓮𝓪𝓾𝓽𝓲𝓯𝓾𝓵 ⅋ 𝓮𝓯𝓯𝓲𝓬𝓲𝓮𝓷𝓽.</TITLE>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    
+<style>
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 2em;
+}
+h2 {
+  font-size: 2em;
+}
+
+div {
+  height: 5em;
+  background: lightblue;
+  margin: 1em;
+}
+
+.aos {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.aos.ed {
+  opacity: 1;
+}
+
+.slideIn {
+  transform: translateY(1em);
+}
+.slideIn.ed {
+  transform: translateY(0em);
+}
+
+.slideInLeft {
+  transform: translateX(-100vw);
+}
+.slideInLeft.ed {
+  transform: translateX(0);
+}
+
+.zoom {
+  opacity: 1;
+}
+.zoom.ed {
+  animation: zoom 1.5s forwards linear;
+}
+@keyframes zoom {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 1.5;
+  }
+  50% {
+    scale: 1;
+  }
+  75% {
+    scale: 1.25;
+  }
+  100% {
+    scale: 1;
+  }
+}
+</style>
+<body>
+
+<h1 class="aos slideIn">Animate On Scroll</h1>
+<p class="aos slideIn">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, mollitia magni nemo eius obcaecati aliquam ex nisi maiores. Autem hic illo quas amet ipsam. Eos tempore repellat sint illum tenetur!
+</p>
+<h2 class="aos slideIn">Scroll</h2>
+<div class="aos"></div>
+<div class="aos"></div>
+<div class="aos slideInLeft"></div>
+<div class="aos zoom"></div>
+<div class="aos slideIn"></div>
+</body>
+</html>
