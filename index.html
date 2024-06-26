@@ -12,7 +12,7 @@
   font { color: #fff;font-family: "Noto Sans TC", sans-serif;font-optical-sizing: auto;}
   footer { color: #fff;font-family: "Noto Sans TC", sans-serif;font-size:10pt;text-align: right;letter-spacing: 2px;　}
 
-  body { color: white; text-decoration: none;padding: 30px;padding-top: 0px;margin: 0; }
+  body { color: white; text-decoration: none;padding: 30px;padding-top: 0px;margin: 0;overflow-x:hidden; }
   body a { color: white; text-decoration: none; }
   a:link {color: white;}
   a:visited { color: #efefef;}
@@ -28,7 +28,7 @@
   background-color: #000;
   z-index: 999;          
   position: fixed;padding-top: 0px;margin-top: 0;
-  min-width: 100%;
+  max-width: 100%;
   opacity: 0.99;
   transition: opacity .5s ease-out;   
   
@@ -121,11 +121,11 @@
 	body{ -ms-overflow-style: none;
 	height: 100%;
 	width: calc(100vw + 18px); /*瀏覽器滾動條的長度大約是 18px*/
-	overflow: auto;}
+	overflow-x:hidden;}
 	
 	html {
     overflow: -moz-hidden-unscrollable; /*注意！若只打 hidden，chrome 的其它 hidden 會出問題*/
-    height: 100%;
+    height: 100%;overflow-x:hidden;
 }
 
 	
@@ -147,7 +147,7 @@ $(function() {
 	<script src="aos.js"></script>
 	
 </HEAD>
-  <body style="background:#000;font:#fff">
+  <body style="background:#000;font:#fff;overflow-x:hidden">
   
 	<div class="navFixed aos"><nav>
 	<div class="tg-wrap aos slideIn"><table class="tg" style="width: 100%;" >
