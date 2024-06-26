@@ -10,22 +10,15 @@
 <style>
 
   font { color: #fff;font-family: "Noto Sans TC", sans-serif;font-optical-sizing: auto;}
+  footer { color: #fff;font-family: "Noto Sans TC", sans-serif;font-size:10pt;text-align: right;letter-spacing: 2px;　}
 
-  body { color: white; text-decoration: none;  }
-  body { background-image: url("test1_1.gif");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;}
-	
+  body { color: white; text-decoration: none;padding: 30px;padding-top: 0px;margin: 0; }
   body a { color: white; text-decoration: none; }
   a:link {color: white;}
   a:visited { color: #efefef;}
   a:hover { color: yellow; }
   a:active { color: dark red; }
-  a { color: white;}   
+  a { color: white;height:30px;padding-bottom:30px;}   
   body a:link { color: white; }
   body a:visited { color: #efefef;}
   body a:hover { color: yellow;}
@@ -34,26 +27,26 @@ background-size: cover;}
   .navFixed {
   background-color: #000;
   z-index: 999;          
-  position: fixed;
+  position: fixed;padding-top: 0px;margin-top: 0;
   min-width: 100%;
-  opacity: 0.94;
+  opacity: 0.99;
   transition: opacity .5s ease-out;   
   
 }
 
 	
-.tg  {background-color:#000;border-collapse:collapse;
-      border-spacing:0;border:none;font-family: "Noto Sans TC", sans-serif;
-      align:center;vertical-align:center;padding: 60px;border-right:10px; }
+.tg  {border-collapse:collapse;border-spacing:0;border:none;font-family: "Noto Sans TC", sans-serif;align:center;vertical-align:center;background:cover;}
 .tg td{font-size:14px;padding:0px;overflow:hidden;word-break:normal;border:none;}
 .tg th{;font-weight:normal;padding:0px;overflow:hidden;word-break:normal;border:none;}
-.tg .tg-i{background-color:#000;color:#ffffff;vertical-align:center;border:none;padding:40px;}
+.tg .tg-iwtr{background-color:#000;color:#ffffff;vertical-align:center;border:none;margin:10px}
 .tg .tg-yzt1{background-color:#000;;vertical-align:center;}
 .tg .tg-cxkv{background-color:#000;}
-.tg .tg-2{text-align:center;vertical-align:center;}
-.tg .tg-3we0{background-color:#000;vertical-align:center;}
+.tg .tg-2{background-color:#000;}
+	.tg .tg-2 a:hover{text-align: center; border-bottom: 3px solid yellow;}
+.tg .tg-3{background:cover;vertical-align:bottom;width:100%;height:500px; }
 .tg .tg-yw4l{vertical-align:center;}
-@media all and (max-width: 479px) {
+	
+@media all and {
   table,
   thead,
   tbody,
@@ -62,13 +55,202 @@ background-size: cover;}
   tr {
     display: block	;
   }
+	
+	.aos-all {
+  width: 98%;
+  max-width: 98%;
+  margin: 50px auto;
+}
+
+.aos-item {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+}
+
+.aos-item::before {
+  content: attr(data-id);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background: #1da4e2;
+  line-height: 260px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (min-width: 420px) {
+  .aos-item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aos-item {
+    width: 33%;
+  }
+}
+
+.aos-anchors__lines {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 2px solid blue;
+  border-bottom: 2px solid red;
+}
+
+.aos-anchors__lines::before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: green;
+}
+
+.aos-anchors__sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.aos-anchors__sidebar > div {
+  padding: 5px 10px;
+  background: #f1f1f1;
+}
+
+.aos-anchors__content {
+  width: 400px;
+  margin: 50px auto;
+}
+
+.aos-anchors__content > div {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 50px;
+  background: #f1f1f1;
+  line-height: 300px;
+  text-align: center;
+  color: #333;
+}
+
+.aos-anchors__content > div::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.aos-anchors__content > div::after {
+  content: attr(data-anchor-id);
+  position: relative;
+  background-color: #f1f1f1;
+}
+
+.aos-anchors__content > div[data-placement$="-bottom"]::before {
+  background-color: red;
+}
+
+.aos-anchors__content > div[data-placement$="-center"]::before {
+  background-color: green;
+}
+
+.aos-anchors__content > div[data-placement$="-top"]::before {
+  background-color: blue;
+}
+
+.aos-anchors__content > div[data-placement^="top-"]::before {
+  top: 0;
+}
+
+.aos-anchors__content > div[data-placement^="center-"]::before {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.aos-anchors__content > div[data-placement^="bottom-"]::before {
+  bottom: 0;
+}
+	
+	
+.aos {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.aos.ed {
+  opacity: 1;
+}
+
+.slideIn {
+  transform: translateY(1em);
+}
+.slideIn.ed {
+  transform: translateY(0em);
+}
+
+.slideInLeft {
+  transform: translateX(-100vw);
+}
+.slideInLeft.ed {
+  transform: translateX(0);
+}
+
+.zoom {
+  opacity: 1;
+}
+.zoom.ed {
+  animation: zoom 1.5s forwards linear;
+}
+@keyframes zoom {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 1.5;
+  }
+  50% {
+    scale: 1;
+  }
+  75% {
+    scale: 1.25;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+	
+	footer{clear:both;
+	padding:50px;color: #fff;
+	line-height: 29px;}
+	
+	div {
+  height: 400px;
+  background: lightblue;
+  margin: 1em;
+}
+	
+	
   </style>
 
 
 <script type="text/javascript">
 $(function() {
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 495)  {          /* 要滑動到選單的距離 */
+    if ($(this).scrollTop() > 0)  {          /* 要滑動到選單的距離 */
        $('.dropdowns').addClass('navFixed');   /* 幫選單加上固定效果 */
     } else {
       $('.dropdowns').removeClass('navFixed'); /* 移除選單固定效果 */
@@ -77,19 +259,21 @@ $(function() {
 });
 </script>  
 	
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	
 </HEAD>
   <body style="background:#000;font:#fff">
   
-	<div class="navFixed"><nav>
-	<div class="tg-wrap"><table class="tg" style="width: 100%;" >
+	<div class="navFixed aos slideIn"><nav>
+	<div class="tg-wrap aos slideIn"><table class="tg" style="width: 100%;" >
 <colgroup>
-<col style="width: 40%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
 </colgroup>
   <tr>
-    <td class="tg-i" rowspan="2"><font size="3"><b>XUANDESIGNN </b></font><p><font size="2"> [ portfolio 2024 ] anything should be 𝓑𝓮𝓪𝓾𝓽𝓲𝓯𝓾𝓵 ⅋ 𝓮𝓯𝓯𝓲𝓬𝓲𝓮𝓷𝓽.</font></p></th>
+    <td class="tg-iwtr" rowspan="2"><font size="3"><b>XUANDESIGNN </b></font><p><font size="2"> [ portfolio 2024 ] anything should be 𝓑𝓮𝓪𝓾𝓽𝓲𝓯𝓾𝓵 ⅋ 𝓮𝓯𝓯𝓲𝓬𝓲𝓮𝓷𝓽.</font></p></th>
     <font size="2"><td class="tg-2"><a href="#">關於<br>about</a></th>
     <td class="tg-2"><a href="#">作品<br>works</a></th>
     <td class="tg-2"><a href="#">e-mail</a></th></font>
@@ -99,82 +283,27 @@ $(function() {
     </font></br>
   </nav></div>
 	
-	
-	<p><p><p><p><p><p><p>
+	  <p>　</p>
+	  <p>　</p>
+	  <p>　</p>
+	  <p>　</p>
+	  <p>　</p>
+ <div class="aos" style="background:url(01.png) no-repeat;background-size: cover;height:600px;">202406</div>
+<div class="aos" style="background:url(02.png) no-repeat;background-size: cover;height:600px;">202406</div>
+<div class="aos slideInLeft" style="background:url(05.png) no-repeat;background-size: cover;height:600px;">202406</div>
+<div class="aos zoom" style="background:url(04.png) no-repeat;background-size: cover;height:600px;">202406</div>
+<div class="aos slideIn" style="background:url(03.png) no-repeat;background-size: cover;height:600px;">202406</div>
+	<p>　</p>
+	  <p>　</p>
+	  <p>　</p>
+	  <script>
+    AOS.init();
+  </script>
 
-	
-	<div class="tg-wrap"><table class="tg" style="width: 100%;" >
-<colgroup>
-<col style="width: 110px">
-<col style="width: 108px">
-<col style="width: 418px">
-<col style="width: 578px">
-</colgroup>
-  <tr>
-    <td class="tg-iwtr" rowspan="2">04/08/2017</th>
-    <td class="tg-bsv2">11:00 – 12:30</th>
-    <td class="tg-bsv2">data</th>
-    <td class="tg-bsv2">data</th>
-  </tr></table></div>
-	
-	
-  </p>
-<p></p>
-	  <p>　</p>
-	  <p>　</p>
-	  <p>　</p>
-	  <p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p><p>　</p>
-	  <p>　</p>
-	  <p>　</p>
-	  
-
-      
+      <!--footer-->
+	<footer> This site are owned by XUAN CHEN from website to works.<br>
+        &copy; all rights reserved by XUANDESIGNN & XUANSCODE since 2024.
+    </footer>
   </body>
 
 </HTML>
