@@ -150,8 +150,8 @@
 .hover-box .info-box h2,.hover-box .info-box span{margin-left: 10px;
 }
 
-footer { color: #fff;font-family: "Noto Sans TC", sans-serif;font-size:10pt;text-align: right;letter-spacing: 2px;
-	 clear:both;padding:50px;color: #fff;line-height: 29px;width: 100vw;}
+.footer { color: #fff;font-family: "Noto Sans TC", sans-serif;font-size:10pt;text-align: right;letter-spacing: 2px;
+	 clear:both;padding:50px;color: #fff;line-height: 29px;width: 100vw;z-index: 999;position:100% 100% 0px 0px;}
 	
   </style>
 
@@ -173,7 +173,7 @@ $(function() {
 </HEAD>
   <body style="background:#000;font:#fff;overflow-x:hidden">
   
-	<div class="navFixed aos"><nav>
+	<div class="navFixed aos slideIn"><nav>
 	<div class="tg-wrap aos slideIn"><table class="tg" style="width: 100%;" >
 <colgroup>
 <col style="width: 40%;">
@@ -234,10 +234,9 @@ $(function() {
     AOS.init();
   </script>
 
-      <!--footer-->
-	<footer> This site are owned by XUAN CHEN from website to works.<br>
+	<div class="footer aos slideInRight"><footer> This site are owned by XUAN CHEN from website to works.<br>
         &copy; all rights reserved by XUANDESIGNN & XUANSCODE since 2024.
-    </footer>
+    </footer></div>
   </body>
 
 </HTML>
